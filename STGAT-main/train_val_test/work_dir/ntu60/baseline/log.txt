@@ -1,0 +1,596 @@
+  [2.389s] [0mbatch_size: 6[0m
+  [2.389s] [0mclass_num: 60[0m
+  [2.390s] [0mconfig: D:/Project/PyCharmP/STGAT-main_JunyuanGai/STGAT-main/train_val_test/config/ntu/ntu60_dsta.yaml[0m
+  [2.390s] [0mcuda_visible_device: 0[0m
+  [2.390s] [0mdata: ntu_skeleton[0m
+  [2.391s] [0mdata_param: {'train_data_param': {'data_path': 'E:/MSCdataset/bvh-Nor/Train_data/xsub/train_data_joint.npy', 'label_path': 'E:/MSCdataset/bvh-Nor/Train_data/xsub/train_label.pkl', 'random_choose': True, 'center_choose': False, 'window_size': 150, 'final_size': 128, 'num_skip_frame': None, 'decouple_spatial': False}, 'val_data_param': {'data_path': 'E:/MSCdataset/bvh-Nor/Train_data/xsub/val_data_joint.npy', 'label_path': 'E:/MSCdataset/bvh-Nor/Train_data/xsub/val_label.pkl', 'random_choose': False, 'center_choose': True, 'window_size': 150, 'final_size': 128, 'num_skip_frame': None, 'decouple_spatial': False}}[0m
+  [2.392s] [0mdebug: False[0m
+  [2.392s] [0mdevice_id: [0][0m
+  [2.392s] [0mfreeze_keys: [][0m
+  [2.392s] [0mgrad_clip: 0[0m
+  [2.392s] [0mignore_weights: ['fc'][0m
+  [2.393s] [0mlabel_smoothing_num: 0[0m
+  [2.393s] [0mlast_model: None[0m
+  [2.393s] [0mloss: cross_entropy[0m
+  [2.393s] [0mlr: 0.0001[0m
+  [2.393s] [0mlr_decay_ratio: 0.1[0m
+  [2.393s] [0mlr_multi_keys: [][0m
+  [2.394s] [0mlr_param: {'step': [60, 90]}[0m
+  [2.394s] [0mlr_scheduler: reduce_by_epoch[0m
+  [2.394s] [0mls_param: {}[0m
+  [2.394s] [0mmax_epoch: 120[0m
+  [2.394s] [0mmix_up_num: 0[0m
+  [2.394s] [0mmode: train_val[0m
+  [2.394s] [0mmodel: st2ransformer_dsta[0m
+  [2.394s] [0mmodel_param: {'num_point': 40, 'num_frame': 3000, 'num_subset': 8, 'num_person': 2, 'glo_reg_s': True, 'att_s': True, 'glo_reg_t': False, 'att_t': False, 'dropout': 0, 'attentiondrop': 0, 'dropout2d': 0, 'use_spatial_att': True, 'use_temporal_att': False, 'use_pet': False, 'use_pes': False, 'config': [[64, 64, 16, 1], [64, 64, 16, 1], [64, 128, 32, 2], [128, 128, 32, 1], [128, 256, 64, 2], [256, 256, 64, 1], [256, 256, 64, 1], [256, 256, 64, 1]]}[0m
+  [2.395s] [0mmodel_saved_name: ./work_dir/ntu60/baseline[0m
+  [2.395s] [0mnum_epoch_per_save: 10[0m
+  [2.395s] [0moptimizer: sgd_nev[0m
+  [2.395s] [0mpin_memory: False[0m
+  [2.395s] [0mpre_trained_model: None[0m
+  [2.395s] [0mstep: [80][0m
+  [2.395s] [0mtrain: classify[0m
+  [2.395s] [0mval_first: False[0m
+  [2.396s] [0mwarm_up_epoch: 5[0m
+  [2.396s] [0mwd: 0.0005[0m
+  [2.396s] [0mworker: 0[0m
+  [2.401s] work dir: ./work_dir/ntu60/baseline
+  [2.644s] Model load finished: st2ransformer_dsta mode: train
+  [3.997s] copy model to gpu
+  [4.002s] Using SGD with momentum 0.9and nesterov
+  [4.004s] no pretrained optimizer is loaded
+  [4.005s] Using loss: cross_entropy
+  [4.009s] Data load finished: ntu_skeleton
+  [4.009s] lr scheduler: Reduce by epoch, step: [60, 90]
+  [4.013s] Model total number of params: 5794940
+  [4.014s] start epoch 0 -> max epoch 120
+
+  [4.014s] Epoch : 0, Current lr: 2e-05
+  [56.982s]        Mean training loss: 5.0377                                                
+  [1.061m]        Mean val loss: 4.9473                                                     
+  [1.061m]        Test Acc: 0.0319
+  [1.061m] Acc: 0.031915, Epoch_time: 59.622789, Best_acc: 0.000000
+
+  [1.061m] Epoch : 1, Current lr: 4e-05
+  [1.813m]        Mean training loss: 4.3047                                                
+  [1.914m]        Mean val loss: 4.0071                                                     
+  [1.914m]        Test Acc: 0.0993
+  [1.914m] Acc: 0.099291, Epoch_time: 51.212666, Best_acc: 0.031915
+
+  [1.914m] Epoch : 2, Current lr: 6.000000000000001e-05
+  [2.700m]        Mean training loss: 3.7154                                                
+  [2.803m]        Mean val loss: 3.4445                                                     
+  [2.803m]        Test Acc: 0.1489
+  [2.803m] Acc: 0.148936, Epoch_time: 53.343729, Best_acc: 0.099291
+
+  [2.803m] Epoch : 3, Current lr: 8e-05
+  [3.617m]        Mean training loss: 3.3362                                                
+  [3.723m]        Mean val loss: 3.1341                                                     
+  [3.723m]        Test Acc: 0.1950
+  [3.723m] Acc: 0.195035, Epoch_time: 55.178204, Best_acc: 0.148936
+
+  [3.723m] Epoch : 4, Current lr: 0.0001
+  [4.540m]        Mean training loss: 3.1632                                                
+  [4.645m]        Mean val loss: 2.9168                                                     
+  [4.645m]        Test Acc: 0.2730
+  [4.645m] Acc: 0.273050, Epoch_time: 55.328839, Best_acc: 0.195035
+
+  [4.645m] Epoch : 5, Current lr: 0.0001
+  [5.464m]        Mean training loss: 2.9725                                                
+  [5.569m]        Mean val loss: 2.7818                                                     
+  [5.569m]        Test Acc: 0.2447
+  [5.569m] Acc: 0.244681, Epoch_time: 55.428890, Best_acc: 0.273050
+
+  [5.569m] Epoch : 6, Current lr: 0.0001
+  [6.402m]        Mean training loss: 2.8425                                                
+  [6.506m]        Mean val loss: 2.6212                                                     
+  [6.506m]        Test Acc: 0.3121
+  [6.506m] Acc: 0.312057, Epoch_time: 56.241986, Best_acc: 0.273050
+
+  [6.507m] Epoch : 7, Current lr: 0.0001
+  [7.334m]        Mean training loss: 2.7612                                                
+  [7.440m]        Mean val loss: 2.5078                                                     
+  [7.440m]        Test Acc: 0.3191
+  [7.440m] Acc: 0.319149, Epoch_time: 56.031401, Best_acc: 0.312057
+
+  [7.440m] Epoch : 8, Current lr: 0.0001
+  [8.280m]        Mean training loss: 2.6709                                                
+  [8.388m]        Mean val loss: 2.3950                                                     
+  [8.388m]        Test Acc: 0.3723
+  [8.388m] Acc: 0.372340, Epoch_time: 56.850527, Best_acc: 0.319149
+
+  [8.388m] Epoch : 9, Current lr: 0.0001
+  [9.237m]        Mean training loss: 2.5502                                                
+  [9.341m]        Mean val loss: 2.4118                                                     
+  [9.341m]        Test Acc: 0.3121
+  [9.341m] Acc: 0.312057, Epoch_time: 57.207243, Best_acc: 0.372340
+
+  [9.341m] Epoch : 10, Current lr: 0.0001
+  [10.110m]        Mean training loss: 2.4935                                                
+  [10.210m]        Mean val loss: 2.1793                                                     
+  [10.210m]        Test Acc: 0.4397
+  [10.210m] Acc: 0.439716, Epoch_time: 52.133755, Best_acc: 0.372340
+
+  [10.210m] Epoch : 11, Current lr: 0.0001
+  [10.981m]        Mean training loss: 2.3929                                                
+  [11.084m]        Mean val loss: 2.0358                                                     
+  [11.084m]        Test Acc: 0.4645
+  [11.084m] Acc: 0.464539, Epoch_time: 52.432642, Best_acc: 0.439716
+
+  [11.084m] Epoch : 12, Current lr: 0.0001
+  [11.845m]        Mean training loss: 2.2981                                                
+  [11.946m]        Mean val loss: 2.0258                                                     
+  [11.946m]        Test Acc: 0.4433
+  [11.946m] Acc: 0.443262, Epoch_time: 51.701652, Best_acc: 0.464539
+
+  [11.946m] Epoch : 13, Current lr: 0.0001
+  [12.715m]        Mean training loss: 2.2397                                                
+  [12.815m]        Mean val loss: 1.9217                                                     
+  [12.815m]        Test Acc: 0.4929
+  [12.815m] Acc: 0.492908, Epoch_time: 52.161165, Best_acc: 0.464539
+
+  [12.815m] Epoch : 14, Current lr: 0.0001
+  [13.571m]        Mean training loss: 2.1272                                                
+  [13.670m]        Mean val loss: 1.7934                                                     
+  [13.670m]        Test Acc: 0.5071
+  [13.670m] Acc: 0.507092, Epoch_time: 51.284630, Best_acc: 0.492908
+
+  [13.670m] Epoch : 15, Current lr: 0.0001
+  [14.427m]        Mean training loss: 2.1227                                                
+  [14.526m]        Mean val loss: 1.6871                                                     
+  [14.526m]        Test Acc: 0.5213
+  [14.526m] Acc: 0.521277, Epoch_time: 51.354629, Best_acc: 0.507092
+
+  [14.526m] Epoch : 16, Current lr: 0.0001
+  [15.275m]        Mean training loss: 2.0265                                                
+  [15.374m]        Mean val loss: 1.6826                                                     
+  [15.374m]        Test Acc: 0.5390
+  [15.374m] Acc: 0.539007, Epoch_time: 50.890896, Best_acc: 0.521277
+
+  [15.374m] Epoch : 17, Current lr: 0.0001
+  [16.122m]        Mean training loss: 1.9520                                                
+  [16.222m]        Mean val loss: 1.6013                                                     
+  [16.222m]        Test Acc: 0.5390
+  [16.222m] Acc: 0.539007, Epoch_time: 50.845709, Best_acc: 0.539007
+
+  [16.222m] Epoch : 18, Current lr: 0.0001
+  [16.969m]        Mean training loss: 1.8961                                                
+  [17.068m]        Mean val loss: 1.5069                                                     
+  [17.068m]        Test Acc: 0.5780
+  [17.068m] Acc: 0.578014, Epoch_time: 50.790818, Best_acc: 0.539007
+
+  [17.068m] Epoch : 19, Current lr: 0.0001
+  [17.815m]        Mean training loss: 1.7711                                                
+  [17.915m]        Mean val loss: 1.4438                                                     
+  [17.915m]        Test Acc: 0.5674
+  [17.915m] Acc: 0.567376, Epoch_time: 50.818058, Best_acc: 0.578014
+
+  [17.915m] Epoch : 20, Current lr: 0.0001
+  [18.671m]        Mean training loss: 1.7965                                                
+  [18.771m]        Mean val loss: 1.4428                                                     
+  [18.771m]        Test Acc: 0.5674
+  [18.771m] Acc: 0.567376, Epoch_time: 51.318019, Best_acc: 0.578014
+
+  [18.771m] Epoch : 21, Current lr: 0.0001
+  [19.519m]        Mean training loss: 1.7761                                                
+  [19.618m]        Mean val loss: 1.3965                                                     
+  [19.618m]        Test Acc: 0.6135
+  [19.618m] Acc: 0.613475, Epoch_time: 50.846782, Best_acc: 0.578014
+
+  [19.618m] Epoch : 22, Current lr: 0.0001
+  [20.371m]        Mean training loss: 1.6659                                                
+  [20.469m]        Mean val loss: 1.3314                                                     
+  [20.470m]        Test Acc: 0.6099
+  [20.470m] Acc: 0.609929, Epoch_time: 51.090604, Best_acc: 0.613475
+
+  [20.470m] Epoch : 23, Current lr: 0.0001
+  [21.214m]        Mean training loss: 1.6238                                                
+  [21.312m]        Mean val loss: 1.3007                                                     
+  [21.312m]        Test Acc: 0.6489
+  [21.312m] Acc: 0.648936, Epoch_time: 50.567496, Best_acc: 0.613475
+
+  [21.312m] Epoch : 24, Current lr: 0.0001
+  [22.062m]        Mean training loss: 1.5739                                                
+  [22.162m]        Mean val loss: 1.2265                                                     
+  [22.162m]        Test Acc: 0.6418
+  [22.162m] Acc: 0.641844, Epoch_time: 50.970892, Best_acc: 0.648936
+
+  [22.162m] Epoch : 25, Current lr: 0.0001
+  [22.911m]        Mean training loss: 1.5046                                                
+  [23.011m]        Mean val loss: 1.1801                                                     
+  [23.011m]        Test Acc: 0.6631
+  [23.011m] Acc: 0.663121, Epoch_time: 50.919982, Best_acc: 0.648936
+
+  [23.011m] Epoch : 26, Current lr: 0.0001
+  [23.758m]        Mean training loss: 1.4650                                                
+  [23.857m]        Mean val loss: 1.1999                                                     
+  [23.857m]        Test Acc: 0.6277
+  [23.857m] Acc: 0.627660, Epoch_time: 50.804913, Best_acc: 0.663121
+
+  [23.857m] Epoch : 27, Current lr: 0.0001
+  [24.611m]        Mean training loss: 1.4501                                                
+  [24.710m]        Mean val loss: 1.1646                                                     
+  [24.710m]        Test Acc: 0.6667
+  [24.710m] Acc: 0.666667, Epoch_time: 51.178359, Best_acc: 0.663121
+
+  [24.710m] Epoch : 28, Current lr: 0.0001
+  [25.455m]        Mean training loss: 1.3904                                                
+  [25.554m]        Mean val loss: 1.1288                                                     
+  [25.554m]        Test Acc: 0.6383
+  [25.554m] Acc: 0.638298, Epoch_time: 50.608707, Best_acc: 0.666667
+
+  [25.554m] Epoch : 29, Current lr: 0.0001
+  [26.308m]        Mean training loss: 1.3670                                                
+  [26.407m]        Mean val loss: 1.0786                                                     
+  [26.407m]        Test Acc: 0.6844
+  [26.407m] Acc: 0.684397, Epoch_time: 51.191643, Best_acc: 0.666667
+
+  [26.407m] Epoch : 30, Current lr: 0.0001
+  [27.153m]        Mean training loss: 1.3114                                                
+  [27.252m]        Mean val loss: 1.1104                                                     
+  [27.252m]        Test Acc: 0.6631
+  [27.252m] Acc: 0.663121, Epoch_time: 50.699212, Best_acc: 0.684397
+
+  [27.252m] Epoch : 31, Current lr: 0.0001
+  [27.997m]        Mean training loss: 1.3397                                                
+  [28.097m]        Mean val loss: 1.0912                                                     
+  [28.097m]        Test Acc: 0.6986
+  [28.097m] Acc: 0.698582, Epoch_time: 50.691615, Best_acc: 0.684397
+
+  [28.097m] Epoch : 32, Current lr: 0.0001
+  [28.846m]        Mean training loss: 1.2691                                                
+  [28.945m]        Mean val loss: 1.0266                                                     
+  [28.945m]        Test Acc: 0.7057
+  [28.945m] Acc: 0.705674, Epoch_time: 50.892773, Best_acc: 0.698582
+
+  [28.945m] Epoch : 33, Current lr: 0.0001
+  [29.692m]        Mean training loss: 1.2201                                                
+  [29.792m]        Mean val loss: 0.9807                                                     
+  [29.792m]        Test Acc: 0.7234
+  [29.792m] Acc: 0.723404, Epoch_time: 50.816407, Best_acc: 0.705674
+
+  [29.792m] Epoch : 34, Current lr: 0.0001
+  [30.548m]        Mean training loss: 1.2300                                                
+  [30.647m]        Mean val loss: 1.0048                                                     
+  [30.647m]        Test Acc: 0.7021
+  [30.647m] Acc: 0.702128, Epoch_time: 51.295382, Best_acc: 0.723404
+
+  [30.647m] Epoch : 35, Current lr: 0.0001
+  [31.397m]        Mean training loss: 1.1845                                                
+  [31.496m]        Mean val loss: 0.9876                                                     
+  [31.496m]        Test Acc: 0.7305
+  [31.497m] Acc: 0.730496, Epoch_time: 50.964819, Best_acc: 0.723404
+
+  [31.497m] Epoch : 36, Current lr: 0.0001
+  [32.246m]        Mean training loss: 1.1758                                                
+  [32.346m]        Mean val loss: 0.9414                                                     
+  [32.346m]        Test Acc: 0.7128
+  [32.346m] Acc: 0.712766, Epoch_time: 50.973584, Best_acc: 0.730496
+
+  [32.346m] Epoch : 37, Current lr: 0.0001
+  [33.091m]        Mean training loss: 1.1201                                                
+  [33.189m]        Mean val loss: 0.9622                                                     
+  [33.189m]        Test Acc: 0.6915
+  [33.189m] Acc: 0.691489, Epoch_time: 50.592211, Best_acc: 0.730496
+
+  [33.189m] Epoch : 38, Current lr: 0.0001
+  [33.938m]        Mean training loss: 1.1403                                                
+  [34.037m]        Mean val loss: 0.9634                                                     
+  [34.037m]        Test Acc: 0.7128
+  [34.037m] Acc: 0.712766, Epoch_time: 50.876629, Best_acc: 0.730496
+
+  [34.037m] Epoch : 39, Current lr: 0.0001
+  [34.787m]        Mean training loss: 1.0861                                                
+  [34.886m]        Mean val loss: 0.9425                                                     
+  [34.886m]        Test Acc: 0.7234
+  [34.887m] Acc: 0.723404, Epoch_time: 50.954230, Best_acc: 0.730496
+
+  [34.887m] Epoch : 40, Current lr: 0.0001
+  [35.636m]        Mean training loss: 1.0663                                                
+  [35.735m]        Mean val loss: 0.9455                                                     
+  [35.735m]        Test Acc: 0.7128
+  [35.735m] Acc: 0.712766, Epoch_time: 50.929416, Best_acc: 0.730496
+
+  [35.735m] Epoch : 41, Current lr: 0.0001
+  [36.492m]        Mean training loss: 1.0610                                                
+  [36.591m]        Mean val loss: 0.9185                                                     
+  [36.591m]        Test Acc: 0.7376
+  [36.591m] Acc: 0.737589, Epoch_time: 51.347541, Best_acc: 0.730496
+
+  [36.591m] Epoch : 42, Current lr: 0.0001
+  [37.342m]        Mean training loss: 1.0058                                                
+  [37.441m]        Mean val loss: 0.9277                                                     
+  [37.441m]        Test Acc: 0.7234
+  [37.441m] Acc: 0.723404, Epoch_time: 51.016627, Best_acc: 0.737589
+
+  [37.441m] Epoch : 43, Current lr: 0.0001
+  [38.194m]        Mean training loss: 1.0111                                                
+  [38.294m]        Mean val loss: 0.8698                                                     
+  [38.294m]        Test Acc: 0.7589
+  [38.294m] Acc: 0.758865, Epoch_time: 51.171420, Best_acc: 0.737589
+
+  [38.294m] Epoch : 44, Current lr: 0.0001
+  [39.042m]        Mean training loss: 0.9751                                                
+  [39.141m]        Mean val loss: 0.8949                                                     
+  [39.141m]        Test Acc: 0.7447
+  [39.141m] Acc: 0.744681, Epoch_time: 50.805290, Best_acc: 0.758865
+
+  [39.141m] Epoch : 45, Current lr: 0.0001
+  [39.887m]        Mean training loss: 1.0293                                                
+  [39.987m]        Mean val loss: 0.8991                                                     
+  [39.987m]        Test Acc: 0.7376
+  [39.987m] Acc: 0.737589, Epoch_time: 50.774517, Best_acc: 0.758865
+
+  [39.987m] Epoch : 46, Current lr: 0.0001
+  [40.739m]        Mean training loss: 0.9936                                                
+  [40.839m]        Mean val loss: 0.8912                                                     
+  [40.839m]        Test Acc: 0.7199
+  [40.839m] Acc: 0.719858, Epoch_time: 51.101513, Best_acc: 0.758865
+
+  [40.839m] Epoch : 47, Current lr: 0.0001
+  [41.586m]        Mean training loss: 0.9324                                                
+  [41.685m]        Mean val loss: 0.8477                                                     
+  [41.685m]        Test Acc: 0.7695
+  [41.685m] Acc: 0.769504, Epoch_time: 50.762437, Best_acc: 0.758865
+
+  [41.685m] Epoch : 48, Current lr: 0.0001
+  [42.440m]        Mean training loss: 0.9055                                                
+  [42.539m]        Mean val loss: 0.9172                                                     
+  [42.539m]        Test Acc: 0.7340
+  [42.539m] Acc: 0.734043, Epoch_time: 51.259763, Best_acc: 0.769504
+
+  [42.539m] Epoch : 49, Current lr: 0.0001
+  [43.287m]        Mean training loss: 0.9372                                                
+  [43.386m]        Mean val loss: 0.8720                                                     
+  [43.386m]        Test Acc: 0.7482
+  [43.386m] Acc: 0.748227, Epoch_time: 50.789361, Best_acc: 0.769504
+
+  [43.386m] Epoch : 50, Current lr: 0.0001
+  [44.133m]        Mean training loss: 0.8580                                                
+  [44.234m]        Mean val loss: 0.8705                                                     
+  [44.234m]        Test Acc: 0.7553
+  [44.234m] Acc: 0.755319, Epoch_time: 50.861570, Best_acc: 0.769504
+
+  [44.234m] Epoch : 51, Current lr: 0.0001
+  [44.982m]        Mean training loss: 0.8984                                                
+  [45.080m]        Mean val loss: 0.8391                                                     
+  [45.080m]        Test Acc: 0.7589
+  [45.080m] Acc: 0.758865, Epoch_time: 50.807336, Best_acc: 0.769504
+
+  [45.080m] Epoch : 52, Current lr: 0.0001
+  [45.828m]        Mean training loss: 0.8706                                                
+  [45.927m]        Mean val loss: 0.7967                                                     
+  [45.927m]        Test Acc: 0.7837
+  [45.927m] Acc: 0.783688, Epoch_time: 50.786334, Best_acc: 0.769504
+
+  [45.927m] Epoch : 53, Current lr: 0.0001
+  [46.681m]        Mean training loss: 0.8759                                                
+  [46.781m]        Mean val loss: 0.8489                                                     
+  [46.781m]        Test Acc: 0.7518
+  [46.781m] Acc: 0.751773, Epoch_time: 51.258012, Best_acc: 0.783688
+
+  [46.781m] Epoch : 54, Current lr: 0.0001
+  [47.531m]        Mean training loss: 0.8509                                                
+  [47.630m]        Mean val loss: 0.7990                                                     
+  [47.630m]        Test Acc: 0.7624
+  [47.630m] Acc: 0.762411, Epoch_time: 50.954680, Best_acc: 0.783688
+
+  [47.630m] Epoch : 55, Current lr: 0.0001
+  [48.383m]        Mean training loss: 0.8168                                                
+  [48.482m]        Mean val loss: 0.8126                                                     
+  [48.482m]        Test Acc: 0.7766
+  [48.482m] Acc: 0.776596, Epoch_time: 51.089582, Best_acc: 0.783688
+
+  [48.482m] Epoch : 56, Current lr: 0.0001
+  [49.225m]        Mean training loss: 0.8471                                                
+  [49.325m]        Mean val loss: 0.7909                                                     
+  [49.325m]        Test Acc: 0.7872
+  [49.325m] Acc: 0.787234, Epoch_time: 50.578681, Best_acc: 0.783688
+
+  [49.325m] Epoch : 57, Current lr: 0.0001
+  [50.077m]        Mean training loss: 0.7824                                                
+  [50.177m]        Mean val loss: 0.7880                                                     
+  [50.177m]        Test Acc: 0.7730
+  [50.177m] Acc: 0.773050, Epoch_time: 51.112670, Best_acc: 0.787234
+
+  [50.177m] Epoch : 58, Current lr: 0.0001
+  [50.923m]        Mean training loss: 0.8209                                                
+  [51.023m]        Mean val loss: 0.8064                                                     
+  [51.023m]        Test Acc: 0.7943
+  [51.023m] Acc: 0.794326, Epoch_time: 50.741372, Best_acc: 0.787234
+
+  [51.023m] Epoch : 59, Current lr: 0.0001
+  [51.770m]        Mean training loss: 0.7350                                                
+  [51.870m]        Mean val loss: 0.7999                                                     
+  [51.870m]        Test Acc: 0.7908
+  [51.870m] Acc: 0.790780, Epoch_time: 50.837939, Best_acc: 0.794326
+
+  [51.870m] Epoch : 60, Current lr: 1e-05
+  [52.625m]        Mean training loss: 0.7652                                                
+  [52.725m]        Mean val loss: 0.7891                                                     
+  [52.725m]        Test Acc: 0.7872
+  [52.725m] Acc: 0.787234, Epoch_time: 51.288520, Best_acc: 0.794326
+
+  [52.725m] Epoch : 61, Current lr: 1e-05
+  [53.470m]        Mean training loss: 0.7480                                                
+  [53.569m]        Mean val loss: 0.7827                                                     
+  [53.569m]        Test Acc: 0.8014
+  [53.569m] Acc: 0.801418, Epoch_time: 50.639071, Best_acc: 0.794326
+
+  [53.569m] Epoch : 62, Current lr: 1e-05
+  [54.325m]        Mean training loss: 0.7449                                                
+  [54.425m]        Mean val loss: 0.7938                                                     
+  [54.425m]        Test Acc: 0.7730
+  [54.425m] Acc: 0.773050, Epoch_time: 51.351074, Best_acc: 0.801418
+
+  [54.425m] Epoch : 63, Current lr: 1e-05
+  [55.171m]        Mean training loss: 0.7425                                                
+  [55.270m]        Mean val loss: 0.8163                                                     
+  [55.270m]        Test Acc: 0.7979
+  [55.270m] Acc: 0.797872, Epoch_time: 50.725038, Best_acc: 0.801418
+
+  [55.270m] Epoch : 64, Current lr: 1e-05
+  [56.019m]        Mean training loss: 0.6982                                                
+  [56.120m]        Mean val loss: 0.7575                                                     
+  [56.120m]        Test Acc: 0.8085
+  [56.120m] Acc: 0.808511, Epoch_time: 50.976973, Best_acc: 0.801418
+
+  [56.120m] Epoch : 65, Current lr: 1e-05
+  [56.870m]        Mean training loss: 0.7407                                                
+  [56.970m]        Mean val loss: 0.7717                                                     
+  [56.970m]        Test Acc: 0.8050
+  [56.970m] Acc: 0.804965, Epoch_time: 51.045552, Best_acc: 0.808511
+
+  [56.970m] Epoch : 66, Current lr: 1e-05
+  [57.718m]        Mean training loss: 0.7215                                                
+  [57.818m]        Mean val loss: 0.7638                                                     
+  [57.818m]        Test Acc: 0.8085
+  [57.818m] Acc: 0.808511, Epoch_time: 50.844517, Best_acc: 0.808511
+
+  [57.818m] Epoch : 67, Current lr: 1e-05
+  [58.574m]        Mean training loss: 0.6594                                                
+  [58.673m]        Mean val loss: 0.7681                                                     
+  [58.673m]        Test Acc: 0.8085
+  [58.673m] Acc: 0.808511, Epoch_time: 51.299471, Best_acc: 0.808511
+
+  [58.673m] Epoch : 68, Current lr: 1e-05
+  [59.422m]        Mean training loss: 0.6672                                                
+  [59.521m]        Mean val loss: 0.7682                                                     
+  [59.521m]        Test Acc: 0.7801
+  [59.521m] Acc: 0.780142, Epoch_time: 50.893559, Best_acc: 0.808511
+
+  [59.521m] Epoch : 69, Current lr: 1e-05
+  [60.272m]        Mean training loss: 0.7249                                                
+  [60.371m]        Mean val loss: 0.7384                                                     
+  [60.371m]        Test Acc: 0.7943
+  [60.371m] Acc: 0.794326, Epoch_time: 51.021707, Best_acc: 0.808511
+
+  [60.371m] Epoch : 70, Current lr: 1e-05
+  [61.116m]        Mean training loss: 0.6787                                                
+  [61.214m]        Mean val loss: 0.7567                                                     
+  [61.214m]        Test Acc: 0.7872
+  [61.215m] Acc: 0.787234, Epoch_time: 50.583691, Best_acc: 0.808511
+
+  [61.215m] Epoch : 71, Current lr: 1e-05
+  [61.963m]        Mean training loss: 0.6579                                                
+  [62.063m]        Mean val loss: 0.7497                                                     
+  [62.063m]        Test Acc: 0.7979
+  [62.063m] Acc: 0.797872, Epoch_time: 50.905753, Best_acc: 0.808511
+
+  [62.063m] Epoch : 72, Current lr: 1e-05
+  [62.813m]        Mean training loss: 0.6892                                                
+  [62.912m]        Mean val loss: 0.7459                                                     
+  [62.912m]        Test Acc: 0.8085
+  [62.912m] Acc: 0.808511, Epoch_time: 50.916176, Best_acc: 0.808511
+
+  [62.912m] Epoch : 73, Current lr: 1e-05
+  [63.661m]        Mean training loss: 0.7001                                                
+  [63.762m]        Mean val loss: 0.7472                                                     
+  [63.762m]        Test Acc: 0.7943
+  [63.762m] Acc: 0.794326, Epoch_time: 51.019316, Best_acc: 0.808511
+
+  [63.762m] Epoch : 74, Current lr: 1e-05
+  [64.518m]        Mean training loss: 0.7304                                                
+  [64.618m]        Mean val loss: 0.7633                                                     
+  [64.618m]        Test Acc: 0.7801
+  [64.618m] Acc: 0.780142, Epoch_time: 51.369183, Best_acc: 0.808511
+
+  [64.618m] Epoch : 75, Current lr: 1e-05
+  [65.363m]        Mean training loss: 0.7521                                                
+  [65.464m]        Mean val loss: 0.7542                                                     
+  [65.464m]        Test Acc: 0.7943
+  [65.464m] Acc: 0.794326, Epoch_time: 50.745427, Best_acc: 0.808511
+
+  [65.464m] Epoch : 76, Current lr: 1e-05
+  [66.219m]        Mean training loss: 0.6441                                                
+  [66.318m]        Mean val loss: 0.7388                                                     
+  [66.318m]        Test Acc: 0.7908
+  [66.318m] Acc: 0.790780, Epoch_time: 51.269122, Best_acc: 0.808511
+
+  [66.318m] Epoch : 77, Current lr: 1e-05
+  [67.066m]        Mean training loss: 0.6856                                                
+  [67.167m]        Mean val loss: 0.7155                                                     
+  [67.167m]        Test Acc: 0.8191
+  [67.167m] Acc: 0.819149, Epoch_time: 50.942695, Best_acc: 0.808511
+
+  [67.167m] Epoch : 78, Current lr: 1e-05
+  [67.919m]        Mean training loss: 0.6995                                                
+  [68.019m]        Mean val loss: 0.7551                                                     
+  [68.019m]        Test Acc: 0.7979
+  [68.019m] Acc: 0.797872, Epoch_time: 51.092715, Best_acc: 0.819149
+
+  [68.019m] Epoch : 79, Current lr: 1e-05
+  [68.769m]        Mean training loss: 0.6878                                                
+  [68.870m]        Mean val loss: 0.7438                                                     
+  [68.870m]        Test Acc: 0.7908
+  [68.870m] Acc: 0.790780, Epoch_time: 51.046495, Best_acc: 0.819149
+
+  [68.870m] Epoch : 80, Current lr: 1e-05
+  [69.616m]        Mean training loss: 0.6826                                                
+  [69.716m]        Mean val loss: 0.7353                                                     
+  [69.716m]        Test Acc: 0.7979
+  [69.716m] Acc: 0.797872, Epoch_time: 50.801687, Best_acc: 0.819149
+
+  [69.716m] Epoch : 81, Current lr: 1e-05
+  [70.471m]        Mean training loss: 0.6591                                                
+  [70.571m]        Mean val loss: 0.7652                                                     
+  [70.571m]        Test Acc: 0.7872
+  [70.571m] Acc: 0.787234, Epoch_time: 51.259954, Best_acc: 0.819149
+
+  [70.571m] Epoch : 82, Current lr: 1e-05
+  [71.321m]        Mean training loss: 0.6770                                                
+  [71.420m]        Mean val loss: 0.7537                                                     
+  [71.420m]        Test Acc: 0.7766
+  [71.420m] Acc: 0.776596, Epoch_time: 50.978296, Best_acc: 0.819149
+
+  [71.420m] Epoch : 83, Current lr: 1e-05
+  [72.171m]        Mean training loss: 0.7028                                                
+  [72.271m]        Mean val loss: 0.7400                                                     
+  [72.271m]        Test Acc: 0.7801
+  [72.271m] Acc: 0.780142, Epoch_time: 51.044093, Best_acc: 0.819149
+
+  [72.271m] Epoch : 84, Current lr: 1e-05
+  [73.020m]        Mean training loss: 0.6486                                                
+  [73.119m]        Mean val loss: 0.7420                                                     
+  [73.119m]        Test Acc: 0.7908
+  [73.120m] Acc: 0.790780, Epoch_time: 50.904859, Best_acc: 0.819149
+
+  [73.120m] Epoch : 85, Current lr: 1e-05
+  [73.868m]        Mean training loss: 0.6751                                                
+  [73.968m]        Mean val loss: 0.7742                                                     
+  [73.968m]        Test Acc: 0.7943
+  [73.968m] Acc: 0.794326, Epoch_time: 50.899382, Best_acc: 0.819149
+
+  [73.968m] Epoch : 86, Current lr: 1e-05
+  [74.722m]        Mean training loss: 0.6273                                                
+  [74.822m]        Mean val loss: 0.7309                                                     
+  [74.822m]        Test Acc: 0.8085
+  [74.822m] Acc: 0.808511, Epoch_time: 51.242740, Best_acc: 0.819149
+
+  [74.822m] Epoch : 87, Current lr: 1e-05
+  [75.572m]        Mean training loss: 0.6700                                                
+  [75.670m]        Mean val loss: 0.7171                                                     
+  [75.670m]        Test Acc: 0.8014
+  [75.671m] Acc: 0.801418, Epoch_time: 50.917060, Best_acc: 0.819149
+
+  [75.671m] Epoch : 88, Current lr: 1e-05
+  [76.426m]        Mean training loss: 0.6285                                                
+  [76.525m]        Mean val loss: 0.7365                                                     
+  [76.525m]        Test Acc: 0.8050
+  [76.525m] Acc: 0.804965, Epoch_time: 51.249119, Best_acc: 0.819149
+
+  [76.525m] Epoch : 89, Current lr: 1e-05
+  [77.270m]        Mean training loss: 0.6488                                                
+  [77.369m]        Mean val loss: 0.7281                                                     
+  [77.369m]        Test Acc: 0.8050
+  [77.369m] Acc: 0.804965, Epoch_time: 50.680196, Best_acc: 0.819149
+
+  [77.369m] Epoch : 90, Current lr: 1.0000000000000002e-06
+  [78.126m]        Mean training loss: 0.6716                                                
+  [78.225m]        Mean val loss: 0.7453                                                     
+  [78.225m]        Test Acc: 0.8050
+  [78.225m] Acc: 0.804965, Epoch_time: 51.346515, Best_acc: 0.819149
+
+  [78.226m] Best model: ./work_dir/ntu60/baseline-77-8502.state, acc: 0.8191489361702128
+  [78.226m] Operation finished
+
